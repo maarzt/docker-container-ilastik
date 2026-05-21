@@ -1,13 +1,5 @@
-# docker-container-ilastik
+# Docker Container With Ilastik And Some Additional Python Libraries
 
-Docker container with ilastik, Python, `tifffile`, and `scikit-image`.
+The container is base on `biocontainers/ilastik` and add some addition python packages, see [Dockerfile](Dockerfile).
 
-## Build locally
-
-```bash
-docker build -t ilastik:local .
-```
-
-## Publish to GitHub Container Registry
-
-The workflow `.github/workflows/publish.yml` builds and publishes the image to GHCR on pushes to `main`, tag pushes (`v*`), or manual dispatch.
+A github action builds the container and pushes it to https://ghcr.io/maarzt/docker-container-ilastik.
