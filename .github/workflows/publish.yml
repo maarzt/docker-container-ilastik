@@ -21,8 +21,8 @@ jobs:
       - name: Build image
         run: docker build -t ilastik:test .
 
-      - name: Verify python and ilastik
-        run: docker run --rm ilastik:test /bin/bash -c "python --version && ilastik --version"
+      - name: Verify python and ilastik launcher
+        run: docker run --rm ilastik:test /bin/bash -c "run_ilastik.sh --help && python --version && python -c 'import tifffile, ome_types'"
 
   docker:
     needs: test
