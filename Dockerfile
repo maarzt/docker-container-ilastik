@@ -22,7 +22,7 @@ ENV UV_NO_DEV=1
 
 # Create virtual environment
 WORKDIR /app
-RUN uv sync --locked
+RUN uv sync
 
 # Activate the virtual environment by placing its binary directory at the front of the path:
 ENV PATH="/app/.venv/bin:$PATH"

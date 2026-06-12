@@ -1245,7 +1245,7 @@ wheels = [
 ]
 
 [[package]]
-name = "ma03-lipid-transport-20250605"
+name = "ma03"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
