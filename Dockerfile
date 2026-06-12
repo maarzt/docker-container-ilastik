@@ -14,7 +14,8 @@ RUN wget -qO- https://astral.sh/uv/install.sh | sh
 ENV PATH="/root/.local/bin:${PATH}"
 
 # Copy dependency metadata
-COPY .python-version pyproject.toml uv.lock /app
+RUN mkdir -p /app
+COPY .python-version pyproject.toml uv.lock /app/
 
 # Disable installation of dev dependencies
 ENV UV_NO_DEV=1
